@@ -1,3 +1,3 @@
 # sparketl
 
-scala,spark,etl
+scala,spark,etl,spark streaming
