@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <!-- <property>
+         <name>hive.metastore.uris</name>
+         <value>thrift://cdh1:9083</value>
+     </property>
+     <property>
+         <name>hive.metastore.client.socket.timeout</name>
+         <value>10000</value>
+     </property>
+     <property>
+         <name>hive.metastore.warehouse.dir</name>
+         <value>/user/hive/warehouse</value>
+     </property>
+     <property>
+         <name>hive.warehouse.subdir.inherit.perms</name>
+         <value>true</value>
+     </property>
+     <property>
+         <name>hive.enable.spark.execution.engine</name>
+         <value>false</value>
+     </property>
+     <property>
+         <name>hive.conf.restricted.list</name>
+         <value>hive.enable.spark.execution.engine</value>
+     </property>
+     <property>
+         <name>hive.metastore.execute.setugi</name>
+         <value>true</value>
+     </property>
+     <property>
+         <name>hive.support.concurrency</name>
+         <value>true</value>
+     </property>
+
+     <property>
+         <name>hive.metastore.local</name>
+         <value>true</value>
+     </property>-->
+
+
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://cdh1:3306/hive</value>
+        <description>JDBC connect string for a JDBC metastore</description>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+        <description>Driver class name for a JDBC metastore</description>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>hive</value>
+        <description>username to use against metastore database</description>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>unionpay</value>
+        <description>password to use against metastore database</description>
+    </property>
+
+    <!-- <property>
+         <name>hive.server2.enable.doAs</name>
+         <value>true</value>
+     </property>
+     <property>
+         <name>hive.server2.use.SSL</name>
+         <value>false</value>
+     </property>-->
+
+
+    <property>
+        <name>hive.exec.dynamic.partition.mode</name>
+        <value>nonstrict</value>
+        <description>hive支持update等语句</description>
+    </property>
+    <property>
+        <name>hive.enforce.bucketing</name>
+        <value>true</value>
+        <description>hive支持update等语句</description>
+    </property>
+    <property>
+        <name>hive.support.concurrency</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hive.txn.manager</name>
+        <value>org.apache.hadoop.hive.ql.lockmgr.DbTxnManager</value>
+    </property>
+    <property>
+        <name>hive.compactor.initiator.on</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hive.compactor.worker.threads</name>
+        <value>1</value>
+    </property>
+
+
+</configuration>
